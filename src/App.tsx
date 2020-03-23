@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import DatePicker from "./components/DatePicker/DatePicker";
 
+import './App.scss';
 
 const App = () => {
     const [date, setDate] = useState<Date>(new Date());
@@ -9,9 +10,9 @@ const App = () => {
     };
 
   return (
-    <div className="App">
-      <DatePicker placeholder="Введите дату" dateFormat="yyyy.MM.dd" label="День рождения" date={date} onChange={handleChange}/>
-      <DatePicker placeholder="Неактивный инпут" disabled={true} dateFormat="yyyy.MM.dd" date={date} onChange={handleChange}/>
+    <div className="wrapper">
+      <DatePicker placeholder="Введите дату" dateFormat="yyyy.MM.dd" label="Дата" date={date} onChange={handleChange}/>
+      <DatePicker label="Неактивный инпут" disabled={true} dateFormat="yyyy.MM.dd" date={date} onChange={handleChange}/>
     </div>
   );
 };

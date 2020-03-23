@@ -12,15 +12,15 @@ export interface DatePickerProps {
     label?: string
     disabled?: boolean
     invalid?: boolean
-    placeholder: string
+    placeholder?: string
     children?: React.ReactNode
 }
 
 const DatePicker = ({children, placeholder, disabled=false,
                         label, dateFormat="yyyy/MM/dd", date, onChange}: DatePickerProps) => {
     return (
-        <div>
-            { label ? <label>{label}</label> : null }
+        <div className="datepicker__wrapper">
+            { label ? <label className="datepicker__label">{label}</label> : null }
             <ReactDatePicker
                 locale={ru}
                 selected={date}

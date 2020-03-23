@@ -31,12 +31,12 @@
   &,
   &::before {
     border-top: none;
-    border-bottom-color: $datepicker__background-color;
+    border-bottom-color: #FFF;
   }
 
   &::before {
     top: -1px;
-    border-bottom-color: $datepicker__border-color;
+    border-bottom-color: #FFF;
   }
 }
 
